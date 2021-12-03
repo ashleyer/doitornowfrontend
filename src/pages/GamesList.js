@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import GameModel from '../models/game'
+import TasksModel from '../models/tasks'
 
 import { Link } from 'react-router-dom'
-import GameCard from '../components/GameCard'
+import TaskCard from '../components/TaskCard'
 
-class GameList extends Component {
+class TaskList extends Component {
   state = {
-    games: []
+    tasks: []
   }
 
   componentDidMount() {
@@ -14,13 +14,13 @@ class GameList extends Component {
   }
 
   fetchData = () => {
-    GameModel.all().then(data => {
-      this.setState({ games: data.games })
+    TaskModel.all().then(data => {
+      this.setState({ tasks: data.tasks})
     })
   }
 
   render() {
-    let gameList = this.state.games.map((game, index) => {
+    let tasksList = this.state.tasks.map((task, index) => {
       return (
         <Link to={`/games/${ game.id }`} key={index}>
           <GameCard  {...game} />
