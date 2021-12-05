@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import TasksModel from '../models/tasks'
+import TaskModel from '../models/taskModel'
 
 import { Link } from 'react-router-dom'
 import TaskCard from '../components/TaskCard'
+import './TaskSecretList.css'
 
-class TaskList extends Component {
+class TasksList extends Component {
   state = {
     tasks: []
   }
@@ -22,19 +23,19 @@ class TaskList extends Component {
   render() {
     let tasksList = this.state.tasks.map((task, index) => {
       return (
-        <Link to={`/games/${ game.id }`} key={index}>
-          <GameCard  {...game} />
+        <Link to={`/tasks/${ task.id }`} key={index}>
+          <TaskCard  {...task} />
         </Link>
       )
     })
 
     return (
       <div>
-        <h1>All Games</h1>
-        { this.state.games ? gameList : 'Loading...' }
+        <h1>Tasks List</h1>
+        { this.state.tasks ? tasksList : 'Loading...' }
       </div>
     );
   }
 }
 
-export default GameList;
+export default TasksList;

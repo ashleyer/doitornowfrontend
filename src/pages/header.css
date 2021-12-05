@@ -1,0 +1,11 @@
+
+body {
+    background-color: gray;
+}
+
+.headerimg {
+    display: flex;
+    height: 30%;
+    width: 30%;
+    align-items: flex-start;
+}

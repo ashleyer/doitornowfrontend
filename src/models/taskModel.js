@@ -1,25 +1,25 @@
-const url = `http://localhost:4000/api/v1`
+const url = `http://localhost:8000/api/v1`
 
-class GameModel {
+class TaskModel {
     static all = () => {
         // the fetch API will not parse JSON in the response automatically so we handle it in the first .then()
-        return fetch(`${url}/games`).then(res => res.json())
+        return fetch(`${url}/tasks`).then(res => res.json())
       }
 
       static show(id) {
         // the fetch API will not parse JSON in the response automatically so we handle it in the first .then()
-        return fetch(`${url}/games/${id}`).then(res => res.json())
+        return fetch(`${url}/tasks/${id}`).then(res => res.json())
       }
 
-      static create = (gameData) => {
-        return fetch(`${url}/games`, {
+      static create = (taskData) => {
+        return fetch(`${url}/tasks`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
         })
         .then(res => {
-            body: JSON.stringify(gameData)
+            body: JSON.stringify(taskData)
             res.json()
           })
       }
@@ -27,4 +27,4 @@ class GameModel {
 }
 
 
-export default GameModel
+export default TaskModel

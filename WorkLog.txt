@@ -1,0 +1,8 @@
+
+12/4:
+
+in models, it is singular
+
+in list it is singular
+
+models/secretModel and /taskModel, changed 4000 to 8000 in line 1 bc server is on 8000, not 4000. is that right?
