@@ -8,41 +8,36 @@ const Header = () => {
 
   return (
 
-    <header>
+    <header id='header'>
 
-      <div className="logo">
-        <div className="image">
-          <img class='headerimg' src={require('../images/block.clear.br.png')}alt='blackandwhite'/>
-        </div>
+      <div className="title">
+        <img id='logored' src={require('../images/block.rw.png')} alt="redwhite" /><h1>Do it... or Else!</h1><h4>i am header</h4>
       </div>
 
-      <br />
+      <nav id='nav'>
 
+        <ul id='homenav'>
+          <li><Link to={'/'}>Home</Link></li>
+          <li><Link to={'/tasksecrethome'}>Task Secret Home</Link></li>
+        </ul>
 
-      <nav>
+        <ul id='tasknav'>
+          <li><Link to={'/taskhome'}>Task Home</Link></li>
+          <li><Link to={'/tasklist'}>My Tasks</Link></li>
+          <li><Link to={'/taskcard'}>Task Card</Link></li>
+          <li><Link to={'/taskshow'}>Task Show</Link></li>
+          <li><Link to={'/newtask'}>Add New Task</Link></li>
+        </ul>
 
-        <div className="tasknav">
-          <Link to={'/'}>My Tasks</Link>
-          <div className="tasklinks">
-            <ul>
-              <li><Link to={'/tasks'}>All Tasks</Link></li>
-              <li><Link to={'/tasks/new'}>List a New Task</Link></li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="secretnav">
-          <Link to={'../pages/secrets'}>All Secrets</Link>
-          <div className="secretlinks">
-            <ul>
-              <li><Link to={'/secrets'}>My Secrets</Link></li>
-              <li><Link to={'/secrets/new'}>Tell a New Secret</Link></li>
-            </ul>
-          </div>
-        </div>
-
+        <ul id='secretnav'>
+          <li><Link to={'../pages/secrethome'}>Secret Home</Link></li>
+          <li><Link to={'/secretlist'}>My Secrets</Link></li>
+          <li><Link to={'/secretcard'}>Secret Card</Link></li>
+          <li><Link to={'/secrewtshow'}>Secret Show</Link></li>
+          <li><Link to={'/newsecret'}>Add New Secret</Link></li>
+        </ul>
       </nav>
-      <br />
+
     </header>
   );
 }

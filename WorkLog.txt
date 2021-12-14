@@ -1,8 +1,25 @@
 
 12/4:
 
-in models, it is singular
 
-in list it is singular
+
 
 models/secretModel and /taskModel, changed 4000 to 8000 in line 1 bc server is on 8000, not 4000. is that right?
+
+
+12.5
+
+taskhome. find way to map thru all tasks. do fetch req to model. use effect hook. look at 2 model show pages in notion
+
+
+
+12.9
+
+questions
+
+
+*****body
+
+12/13
+
+removed recoil route from line 13 17 in frontend index.js

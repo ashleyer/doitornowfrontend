@@ -14,7 +14,7 @@ class NewSecret extends Component {
 
         SecretModel.create(this.state)
             .then(data => {
-                this.props.history.push('/secrets')
+                this.props.history.push('/secretlist')
             })
     }
 

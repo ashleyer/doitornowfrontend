@@ -1,14 +1,14 @@
 import React from 'react';
-import Header from "../components/Header"
-import TaskCard from '../components/TaskCard';
-import Footer from '../components/Footer';
+
+import TaskContainer from '../containers/taskContainer';
+
 
 const TaskHome = () => {
     return (
         <div>
-            <Header />
-            {TaskCard}
-            <Footer />
+           I am Task Home
+            {TaskContainer}
+       
         </div>
     );
 }

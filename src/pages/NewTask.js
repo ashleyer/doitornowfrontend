@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import taskModel from '../models/taskModel'
+import TaskModel from '../models/taskModel'
 
 class NewTask extends Component {
   state = {
@@ -11,9 +11,9 @@ class NewTask extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    taskModel.create(this.state)
+    TaskModel.create(this.state)
       .then(data => {
-        this.props.history.push('/tasks')
+        this.props.history.push('/tasklist')
       })
   }
 

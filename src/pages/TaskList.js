@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import TaskCard from '../components/TaskCard'
 import './TaskSecretList.css'
 
-class TasksList extends Component {
+class TaskList extends Component {
   state = {
     tasks: []
   }
@@ -21,7 +21,7 @@ class TasksList extends Component {
   }
 
   render() {
-    let tasksList = this.state.tasks.map((task, index) => {
+    let taskList = this.state.tasks.map((task, index) => {
       return (
         <Link to={`/tasks/${ task.id }`} key={index}>
           <TaskCard  {...task} />
@@ -32,10 +32,10 @@ class TasksList extends Component {
     return (
       <div>
         <h1>Tasks List</h1>
-        { this.state.tasks ? tasksList : 'Loading...' }
+        { this.state.tasks ? taskList : 'Loading...' }
       </div>
     );
   }
 }
 
-export default TasksList;
+export default TaskList;

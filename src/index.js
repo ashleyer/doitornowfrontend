@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
-//import recoil root;
+
 import { RecoilRoot } from "recoil";
 
 import "./index.css";
 import App from "./App";
+import './styles/App.css'
 
 // wrap recoil root around Router and App
 ReactDOM.render(
@@ -14,7 +15,7 @@ ReactDOM.render(
       <Router>
         <App />
       </Router>
-    </RecoilRoot>
+      </RecoilRoot>
   </React.StrictMode>,
   document.getElementById("root")
 );

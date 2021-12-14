@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import SecretCard from '../components/SecretCard'
 import './TaskSecretList.css'
 
-class SecretsList extends Component {
+class SecretList extends Component {
     state = {
         secrets: []
     }
@@ -21,7 +21,7 @@ class SecretsList extends Component {
     }
 
     render() {
-        let secretsList = this.state.secrets.map((secret, index) => {
+        let SecretList = this.state.secrets.map((secret, index) => {
             return (
                 <Link to={`/secrets/${secret.id}`} key={index}>
                     <SecretCard  {...secret} />
@@ -31,11 +31,11 @@ class SecretsList extends Component {
 
         return (
             <div>
-                <h1>Secrets List</h1>
-                {this.state.secrets ? secretsList : 'Loading...'}
+                <h1>I am Secret List</h1>
+                {this.state.secrets ? SecretList : 'Loading...'}
             </div>
         );
     }
 }
 
-export default SecretsList;
+export default SecretList;
